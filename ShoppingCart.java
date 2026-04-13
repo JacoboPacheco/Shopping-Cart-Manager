@@ -65,15 +65,15 @@ public class ShoppingCart {
       }
       return total;
    }
-   public int getCostOfCart() {
-      int totalCost = 0;
+   public double getCostOfCart() {
+      double totalCost = 0;
       for (ItemToPurchase item : cartItems) {
          totalCost += item.getPrice() * item.getQuantity();
       }
       return totalCost;
    }
    public void printTotal() {
-      System.out.println(customerName + "'s Shopping Cart - " + currentDate);
+      System.out.println("%s's Shopping Cart - %s", customerName, currentDate);
       System.out.println("Number of Items: " + getNumItemsInCart());
       System.out.println();
       if (cartItems.isEmpty()) {
@@ -82,17 +82,12 @@ public class ShoppingCart {
          for (ItemToPurchase item : cartItems)
             item.printItemCost();
       }
-      System.out.println("\nTotal: $" + getCostOfCart());
+      System.out.println("\nTotal: $.2f", getCostOfCart());
    }
    public void printDescriptions() {
       for (ItemToPurchase item : cartItems) {
          item.printItemDescription();
       }
    }
-
-   public void printMenu() {
-      
-   }
-
 }
 
