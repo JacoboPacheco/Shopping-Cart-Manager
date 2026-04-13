@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class ShoppingCartManager {
-
    public static void printMenu() {
       System.out.println("MENU");
       System.out.println("a - Add item to cart");
@@ -59,7 +58,7 @@ public class ShoppingCartManager {
             System.out.println("Choose an option:");
             break;
       }
-
+      
    }
    public static void main(String[] args) {
       Scanner read = new Scanner(System.in);
@@ -86,6 +85,5 @@ public class ShoppingCartManager {
             executeMenu(input, cart, read);
          }
       }
-
    }
 }
