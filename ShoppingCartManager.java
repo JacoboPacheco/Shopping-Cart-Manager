@@ -79,11 +79,12 @@ public class ShoppingCartManager {
       
       while (input != 'q') {
          printMenu();
-         System.out.print("Please type the character corresponding to your choice: ");
+         System.out.println("Choose an option:");
          input = read.next().charAt(0);
          read.nextLine();
-         System.out.println("");
-         executeMenu(input, cart, read);
+         if (input != 'q') {
+            executeMenu(input, cart, read);
+         }
       }
 
    }
